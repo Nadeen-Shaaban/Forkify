@@ -446,11 +446,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //import icons from '../img/icons.svg'; //parcel 1
 const {
   test
-} = require('picomatch');
+} = require("picomatch");
 
 const {
   title
-} = require('process');
+} = require("process");
 
 const recipeContainer = document.querySelector('.recipe');
 
@@ -480,14 +480,13 @@ const showRecipe = async function () {
   try {
     const id = window.location.hash.slice(1); //id+hash abl lid wl slice 5alletna nshouf l akli lla id
 
-    console.log(id);
-    if (!id) return; //1)loading recipe
+    console.log(id); //1)loading recipe
 
     renderSpinner(recipeContainer);
     const res = await fetch( //'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bcae5'
     `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
     const data = await res.json();
-    if (!res.ok) throw new Error(`${data.message} (${res.status})`); //bt3tina like alert innu l request 8lt
+    if (!res.ok) throw new Error(`${data.message} (${res.status})`); //bt3tina like alert innu l request 8lt 
 
     console.log(res, data);
     let {
@@ -602,8 +601,7 @@ const showRecipe = async function () {
   }
 };
 
-const arr = ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe)); // window.addEventListener('hashchange', showRecipe);
-// window.addEventListener('load', showRecipe);
+window.addEventListener('hashchange', showRecipe);
 },{"url:../img/icons.svg":"eb6aac8979df1a43c873d08a9f320ea1","picomatch":"12d1dcd5e5eae45bf8f2edac26a6e114","process":"5c67a338692e43521550fae6ba10bde5","core-js/modules/web.immediate.js":"140df4f8e97a45c53c66fead1f5a9e92"}],"eb6aac8979df1a43c873d08a9f320ea1":[function(require,module,exports) {
 module.exports = require('./bundle-url').getBundleURL() + require('./relative-path')("b5bebac0f061b3ca", "e19ebbb894ddf897");
 },{"./bundle-url":"2146da1905b95151ed14d455c784e7b7","./relative-path":"1b9943ef25c7bbdf0dd1b9fa91880a6c"}],"2146da1905b95151ed14d455c784e7b7":[function(require,module,exports) {

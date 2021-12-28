@@ -480,8 +480,7 @@ const showRecipe = async function () {
   try {
     const id = window.location.hash.slice(1); //id+hash abl lid wl slice 5alletna nshouf l akli lla id
 
-    console.log(id);
-    if (!id) return; //1)loading recipe
+    console.log(id); //1)loading recipe
 
     renderSpinner(recipeContainer);
     const res = await fetch( //'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bcae5'
