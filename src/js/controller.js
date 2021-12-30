@@ -24,10 +24,11 @@ const controlRecipes = async function () {
 
     //1)loading recipe
     await model.loadRecipe(id); //7attaina await cz its async
+
     //2)rendering recipe
     recipeView.render(model.state.recipe);
   } catch (err) {
-    console.log(err);
+    recipeView.renderError();
   }
 };
 
